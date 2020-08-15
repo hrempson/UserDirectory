@@ -3,26 +3,28 @@ import {Table} from "react-bootstrap";
 
 function UserTable(props){
 
+    // props.users.filter();
+
     return  (
         <Table striped bordered hover>
             <thead>
                 <tr>
-                    <td scope= "col">First name</td>
-                    <td scope= "col">Last name</td>
-                    <td scope= "col">Email</td>
-                    <td scope= "col">Phone #</td>
-                    <td scope= "col">Address</td>
+                    <th scope= "col">First name</th>
+                    <th scope= "col">Last name</th>
+                    <th scope= "col">Email</th>
+                    <th scope= "col">Phone #</th>
+                    <th scope= "col">Address</th>
                 </tr>
             </thead>
             <tbody>
                 {props.users.map(user => {
                     return (
                         <tr key ={user.id.value}>
-                            <td scope= "col">{user.name.first}</td>
-                            <td scope= "col">{user.name.last}</td>
-                            <td scope= "col">{user.email}</td>
-                            <td scope= "col">{user.phone}</td>
-                            <td scope= "col">{user.location.city}</td>
+                            <td>{user.name.first}</td>
+                            <td>{user.name.last}</td>
+                            <td>{user.email}</td>
+                            <td>{user.phone}</td>
+                            <td>{user.location.city}</td>
                         </tr>
                     )
                 })}
