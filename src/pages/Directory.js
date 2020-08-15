@@ -34,7 +34,7 @@ updateSearch = (search) => {
             <Card body>
             <SearchForm updateSearch={this.updateSearch}/>
             </Card>
-            <UserTable users={this.state.users} />
+            <UserTable users={this.state.users} search={this.state.search} />
         </Container>
          )
       }
