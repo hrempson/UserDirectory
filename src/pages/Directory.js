@@ -27,7 +27,7 @@ updateSort = (sort) => {
       API
         .getUsers()
         .then(res => {
-          console.log(res.data.results[0]);
+          // console.log(res.data.results[0]);
           this.setState({ users: res.data.results } );
     });
   }
